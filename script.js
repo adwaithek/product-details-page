@@ -18,7 +18,7 @@ async function fetchImages() {
     const response = await fetch("https://picsum.photos/v2/list?page=1&limit=5");
     const data = await response.json();
     images = data.map((image) => ({
-      url: `${image.download_url}?w=600&h=400`,
+      url: `${image.download_url}`,
       author: image.author,
     }));
     renderCarousel();
